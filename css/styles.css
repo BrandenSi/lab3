@@ -1,19 +1,21 @@
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; 
   background-color: #f0f0f0;
+  line-height: 1.5; 
 }
 
 form {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 400px; 
+  max-width: 400px;
   margin: 0 auto;
   padding: 20px;
+  border-radius: 8px;
 }
 
 h1 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   font-size: 1.5em;
   margin-bottom: 15px;
 }
@@ -31,19 +33,25 @@ label {
 input,
 checkbox {
   background-color: #f8f8f8;
-  width: 100%;
+  width: calc(100% - 20px);
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc; 
+  border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input {
+  border: 1px solid #ccc;
 }
 
 a {
   background-color: #333;
-  text-decoration: none; 
-  color: #fff; 
-  transition: color 0.3s ease; 
-  padding: 8px 12px; 
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 4px; 
 }
 
 a:hover {
@@ -57,4 +65,21 @@ a:hover {
   form {
     max-width: 100%; 
   }
+}
+
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+input:focus {
+  outline: 2px solid #3498db;
+  border-color: #3498db;
+}
+
+[type="checkbox"]:checked + label {
+  font-weight: bold;
+  color: #333;
 }
