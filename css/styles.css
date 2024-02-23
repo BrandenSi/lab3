@@ -1,3 +1,23 @@
+button, input, select, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+select::-moz-focus-inner,
+textarea::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button:-moz-focusring,
+input:-moz-focusring,
+select:-moz-focusring,
+textarea:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
 
 body {
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; 
