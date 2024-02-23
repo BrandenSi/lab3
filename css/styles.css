@@ -208,3 +208,8 @@ input:focus {
   font-weight: bold;
   color: #333;
 }
+
+input[type="number"]::inner-spin-button,
+input[type="number"]::outer-spin-button {
+  height: auto;
+}
