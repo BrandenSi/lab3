@@ -221,6 +221,10 @@ textarea {
 }
 
 input[type="number"] {
+  appearance: textfield;
+}
+
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
