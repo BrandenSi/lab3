@@ -2,26 +2,65 @@
 body {
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; 
   background-color: #f0f0f0;
+  text-align: center;
+  width: 100%;
   line-height: 1.5; 
 }
 
 form {
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
 }
 
-h1 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1.5em;
+input[type="submit"] {
+  background-color: #666;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #444;
+}
+
+label[for="age-verification"] {
+  display: inline-block;
+  width: calc(100% - 53px);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: left;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #333;
+}
+
+input,
+label,
+[type="checkbox"] {
   margin-bottom: 15px;
 }
 
+h1 {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.618em;
+  padding: 10px;
+  line-height: 1.2em;
+}
+
 p {
-  margin-bottom: 20px;
+  font-size: 1em;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 label {
@@ -46,9 +85,8 @@ input {
 }
 
 a {
-  background-color: #333;
   text-decoration: none;
-  color: #fff;
+  color: #333;
   transition: color 0.3s ease;
   padding: 8px 12px;
   border-radius: 4px; 
@@ -67,11 +105,78 @@ a:hover {
   }
 }
 
+@media screen and (min-width: 992px) {
+  p {
+    padding-bottom: 70px;
+  }
+
+  ol {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  
 #content {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 20px;
+}
+
+#input-email label {
+  display: inline-block;
+  width: 50px;
+  margin-right: 10px;
+}
+
+#input-email input {
+  display: inline-block;
+  width: calc(100% - 90px);
+  margin-bottom: 10px;
+  border-radius: 5%;
+}
+
+#input-age-verification label {
+  display: inline-block;
+  width: calc(100% - 53px);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+#input-age-verification input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  accent-color: rgb(58, 58, 58);
+  height: 1em;
+  width: 1em;
+}
+
+#input-submit input[type="submit"] {
+  margin-top: 10px;
+  width: 150px;
+  border-radius: 5%;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+input[type="email"],
+input[type="checkbox"],
+input[type="submit"] {
+  border: none;
+  background-color: #f0f0f0e6;
+  padding: 5px;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+#input-submit input[type="submit"] {
+    width: 80%;
+    height: 60px;
+    margin-top: 70px;
+    font-size: 1.618em;
+  }
 }
 
 input:focus {
